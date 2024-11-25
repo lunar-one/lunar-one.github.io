@@ -12,12 +12,14 @@
 </head>
 
 <body>
+    <audio loop preload="auto" id="audio" src="./vid.mp3" type="audio/mp3"></audio>
+
+
     <div id="clickoverlay">
         <div id="overlay-content">
             <span>enter lunar.one...</span>
         </div>
     </div>
-
 
     <div id="panel">
         <div id="content">
@@ -37,6 +39,8 @@
     <script>
         document.getElementById("clickoverlay").addEventListener("click", function () {
             this.classList.add("hide");
+            document.getElementById("audio").volume = 0.2;
+            document.getElementById("audio").play();
         });
     </script>
 </body>
